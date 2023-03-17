@@ -1,0 +1,44 @@
+Test Cases
+
+Search(Home) Page
+
+(1) test the page title and search input text are correct
+(2) be able to search with movies in foreign language title (e.g. chinese, japanese, french, german, russian, arabic, hindi, etc.,)
+(3) proper error message should be displayed when search input is invalid - e.g. exceeding string length, empty input, double byte (chinese, japanese etc) title, hi-ascii title
+(4) reloading the page would display the same content
+(5) the pages should be displayed and work fine on different screen size (e.g. iphone 7, iPad, Surface pro, Samsung galaxy, etc)
+(6) search should work with very long movie title, very short movie title (e.g. 'Z', 'Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Alien, Flesh Eating, Hellbound, Zombified Living Dead Part 2')
+(7) search with ' in movie title , eg. 'Things to Do in Denver When You're Dead'
+(8) test the API performance - search result in 3000 ms
+
+Result Page
+(1) search returns a list of movies, each card should have a poster image, title, and year made
+
+(2) each card in result list should be completely visible (now the first movie card is cut off at the top, if there are many cards)
+(3) click on one of the card opens up the corresponding movie page
+(4) reloading the page would display the same content (result set)
+(5) the pages should be displayed and work fine on different screen size (e.g. iphone 7, iPad, Surface pro, Samsung galaxy, etc)
+
+Movie Page
+(1) The search input text should not be visible on each movie page
+(2) reloading the page would display the same content
+(3) the pages should be displayed and work fine on different screen size (e.g. iphone 7, iPad, Surface pro, Samsung galaxy, etc)
+
+
+
+Feature Request
+
+Search (Home) Page
+(2) Right now it searches only within a title.  Search for a movie by 'director', 'actor', 'year made', 'distributor (e.g. disney) ', 'plot','country', etc
+
+Result Page
+(1) add pagination for a result list longer than 10 or so 
+(3) sort by years made (descending/ascending)
+(4) sort by genre
+(8) there should be buttons to go back to the search result page and home page
+(6) sort by rating
+
+Movie Page
+(5) rating added to movie-card in search result and movie card page
+(7) reviews added to movie card page 
+(8) there should be buttons to go back to the search result page and home page
