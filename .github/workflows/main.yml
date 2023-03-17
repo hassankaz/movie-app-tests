@@ -8,12 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: 'search tests - electron'
+      - name: Cypress run
         uses: cypress-io/github-action@v5 # use the explicit version number
         with:
-          build: npm run build
-          start: npm start
           wait-on: 'http://localhost:8080'
           wait-on-timeout: 120
+          config-file: cypress.config.js
           browser: electron
           spec: cypress/e2e/movie-search.tests.cy.js
+          
