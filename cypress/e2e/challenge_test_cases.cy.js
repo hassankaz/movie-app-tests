@@ -49,13 +49,13 @@ it('clicking in search box hightlights it', ()=>{
 });
 
  //f) Validate opening Movie page displays correct content (Test will not work but please complete it using POM)
- it.only('movie page card', ()=>{
+ it('movie page card2', ()=>{
   searchMovie.search('Puss in Boots');
   result.checkTitle('Puss in Boots');
   //the test fail to open the movie page from here
   movie.displayCard('Puss in Boots');
   movie.displayMovieTitle('Puss in Boots');
-  movie.displayMovieImage();
+  movie.displayMovieImage();s
  });
 
  //g) Validate pasting a Movie name into the textbox and its result
