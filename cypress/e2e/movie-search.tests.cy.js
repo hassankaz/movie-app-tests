@@ -9,7 +9,7 @@ describe('Search tests', () => {
 
  beforeEach(()=>{
   //load the app
- cy.visit("http://localhost:8080/");
+ cy.visit("http://127.0.0.1:8080/");
  // check if the homepage is correct
  cy.title().should('eq','OMDb');
  
