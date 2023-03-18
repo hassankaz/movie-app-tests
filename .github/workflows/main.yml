@@ -18,8 +18,7 @@ jobs:
         with:
           install: true
           wait-on: 'http://127.0.0.1:8080'
-          wait-on-timeout: 120
-          headless: true
+          wait-on-timeout: 60
           config-file: ./cypress.config.js
           browser: electron
           spec: cypress/e2e/movie-search.tests.cy.js
