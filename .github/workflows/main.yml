@@ -17,7 +17,7 @@ jobs:
         uses: cypress-io/github-action@v5 # use the explicit version number
         with:
           install: true
-          wait-on: 'http://127.0.0.1:8080'
+          wait-on: 'npx --yes wait-on --timeout 60000 tcp:8080'
           wait-on-timeout: 60
           config-file: ./cypress.config.js
           browser: electron
