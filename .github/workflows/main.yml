@@ -11,10 +11,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5 # use the explicit version number
         with:
-          install: false
-          env: host=127.0.0.1,port=8080 
-          wait-on: 'http://127.0.0.1:8080'
-          wait-on-timeout: 120
+          install: true
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 30
           config-file: ./cypress.config.js
           browser: electron
           spec: cypress/e2e/movie-search.tests.cy.js
