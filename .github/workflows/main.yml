@@ -14,10 +14,10 @@ jobs:
           install: true
           node-version: '16'
       - name: Cypress run
-        uses: cypress-io/github-action@v5 # use the explicit version number
+        uses: cypress-io/github-action@v5
         with:
           install: true
           config-file: ./cypress.config.js
           browser: electron
-          spec: cypress/e2e/movie_search_tests.cy.js
+          spec: cypress/e2e/sample_test.cy.js
           
