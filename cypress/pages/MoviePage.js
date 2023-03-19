@@ -1,6 +1,4 @@
-import ResultPage from "./ResultPage";
-
-class MoviePage extends ResultPage{
+class MoviePage{
 
 displayCard(movieTitle){
 cy.get('h3').contains(movieTitle).first().click();
@@ -11,9 +9,6 @@ cy.get('h2').should('contain',title);
 }
 displayMovieImage(){
 cy.get('[class="img-container"]').should('be.visible');    
-}
-displaySearchText(){
-    
 }
 }
 
