@@ -19,5 +19,5 @@ jobs:
           install: true
           config-file: ./cypress.config.js
           browser: electron
-          spec: cypress/e2e/movie_search_tests.cy.js
+          spec: cypress/e2e/first_test_spec.cy.js
           
