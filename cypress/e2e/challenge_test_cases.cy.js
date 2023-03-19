@@ -32,6 +32,11 @@ it('search result card should show year made', ()=>{
   result.checkYearText('Year');
 });
 
+it('search result card should show image',()=>{
+  searchMovie.search('Puss in');
+  result.checkImg();
+})
+
  //d) Validate autocomplete card image rendered size
 it('search result card image size', ()=>{
   searchMovie.search('Puss in');
@@ -64,7 +69,7 @@ it('clicking in search box hightlights it', ()=>{
 });
 
 //h) Validate searching for a movie and mocking its result so it's now called "Flow The Movie"
-it.only('search for a movie and update the result title with Flow The Movie', ()=>{
+it('search for a movie and update the result title with Flow The Movie', ()=>{
   searchMovie.search('puss in boots');
   cy.get('h3[class="movie-title"]').eq(0).should('have.text','Puss in Boots');
   cy.get('h3[class="movie-title"]').eq(0).invoke('text').invoke('replace','Puss in Boots','Flow The Movie').should('eq','Flow The Movie');

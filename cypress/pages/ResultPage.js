@@ -22,8 +22,8 @@ checkYear(year){ //cypress has a bug that instead of showing the first item in t
 checkYearText(text){
      cy.get('h5[class="movie-year-text"]').eq(0).should('contain', text);
 }
-checkImg(img){
-    cy.get('img[class="movie-img"]').eq(0).should.be.visible();
+checkImg(){
+    cy.get('img[class="movie-img"]').eq(0).should('be.visible');
 }
 checkImgSize(){
     cy.get('img[class="movie-img"]').invoke('outerWidth').should('eq', 40);
