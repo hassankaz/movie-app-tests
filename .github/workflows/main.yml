@@ -18,7 +18,7 @@ jobs:
         with:
           install: true
           config-file: ./cypress.config.js
-          wait-on: 'http://[::1]:8080'
+          wait-on: 'http://127.0.0.1:8080'
           browser: electron
           spec: cypress/e2e/movie_search_tests.cy.js
           
