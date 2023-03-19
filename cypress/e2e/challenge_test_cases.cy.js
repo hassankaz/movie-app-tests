@@ -65,8 +65,8 @@ it('clicking in search box hightlights it', ()=>{
 
 //h) Validate searching for a movie and mocking its result so it's now called "Flow The Movie"
 it.only('search for a movie and update the result title with Flow The Movie', ()=>{
-  searchMovie.search('and Avatar');
-  cy.get('h3[class="movie-title"]').eq(0).should('have.text','and Avatar');
-  cy.get('h3[class="movie-title"]').eq(0).invoke('text').invoke('replace','and Avatar','Flow The Movie').should('eq','Flow The Movie');
+  searchMovie.search('puss in boots');
+  cy.get('h3[class="movie-title"]').eq(0).should('have.text','Puss in Boots');
+  cy.get('h3[class="movie-title"]').eq(0).invoke('text').invoke('replace','Puss in Boots','Flow The Movie').should('eq','Flow The Movie');
 });
 })
