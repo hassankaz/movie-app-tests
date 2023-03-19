@@ -22,6 +22,9 @@ class SearchPage{
     searchWithNoKeyword(){
         cy.get('input[id="search"]').invoke('val','').type('{enter}');
     }
+    searchWithPastedKeyword(textToPaste){
+        cy.get('[id="search"]').invoke('val', textToPaste).type('{backspace}');
+    }
 }
 
 export default SearchPage;

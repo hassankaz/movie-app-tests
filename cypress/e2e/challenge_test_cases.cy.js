@@ -51,7 +51,7 @@ it('clicking in search box hightlights it', ()=>{
 });
 
  //f) Validate opening Movie page displays correct content (Test will not work but please complete it using POM)
- it('movie page card2', ()=>{
+it('movie page card2', ()=>{
   searchMovie.search('Puss in Boots');
   result.checkTitle('Puss in Boots');
   //the test fail to open the movie page
@@ -62,16 +62,16 @@ it('clicking in search box hightlights it', ()=>{
 
  //g) Validate pasting a Movie name into the textbox and its result - a little bit of cheating here as the search is triggered by typing in something. so I add a space
  // to the original search keyword, paste it in, then removed it by typing 'backspace'. Hope this is ok. 
- it('search works by pasting into the search text',()=>{
+it('search works by pasting into the search text',()=>{
   let textToPaste = "Avatar ";
-  cy.get('[id="search"]').invoke('val', textToPaste).type('{backspace}');
+  searchMovie.searchWithPastedKeyword(textToPaste);
   result.checkTitle('Avatar');
 });
 
 //h) Validate searching for a movie and mocking its result so it's now called "Flow The Movie"
 it('search for a movie and update the result title with Flow The Movie', ()=>{
   searchMovie.search('puss in boots');
-  cy.get('h3[class="movie-title"]').eq(0).should('have.text','Puss in Boots');
-  cy.get('h3[class="movie-title"]').eq(0).invoke('text').invoke('replace','Puss in Boots','Flow The Movie').should('eq','Flow The Movie');
+  result.checkTitleAsText('Puss in Boots');
+  result.updateTitle('Puss in Boots','Flow The Movie');
 });
 })

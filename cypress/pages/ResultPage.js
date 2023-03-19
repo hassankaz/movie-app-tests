@@ -27,8 +27,14 @@ class ResultPage{
     checkImgSize(){
         cy.get('img[class="movie-img"]').invoke('outerWidth').should('eq', 40);
     }
-        checkTime(title){
+    checkTime(title){
         cy.get('h3[class = "movie-title"]',{timeout: 300}).contains(title).should('be.visible');
+    }
+    checkTitleAsText(title){
+        cy.get('h3[class="movie-title"]').eq(0).should('have.text',title);
+    }
+    updateTitle(titleA, titleB){
+        cy.get('h3[class="movie-title"]').eq(0).invoke('text').invoke('replace',titleA, titleB).should('eq', titleB);
     }
 
 }

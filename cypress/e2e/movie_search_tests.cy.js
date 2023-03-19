@@ -19,11 +19,11 @@ it('search works: default case',()=>{
   searchMovie.search('Avatar');
   result.checkAllTitle('Avatar');
 }); 
-it('search text is case insensitive',()=>{
+it('search keyword is case insensitive',()=>{
   searchMovie.search('avatar');
   result.checkAllTitle('Avatar');
 }); 
-it('search with multiple words',()=>{
+it('search with a phrase',()=>{
  searchMovie.search('puss in boots');
  result.checkAllTitle('Puss in Boots');
 });
@@ -65,4 +65,4 @@ it('no result with movie search null string',()=>{
 //  result.checkAllTitle('七人の侍'); 
 //  })
 
- })
+})
