@@ -33,7 +33,7 @@ describe('Movie App QA Challenges', () => {
     result.checkImg();
   });
 
- //d) Validate autocomplete card image rendered size
+ //d) Validate autocomplete card image rendered size. I see that the width is constant (40px) across all images so I validate only the width. 
   it('search result card image size', ()=>{
     searchMovie.search('Puss in');
     result.checkImgSize('40');
