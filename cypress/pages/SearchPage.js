@@ -2,6 +2,11 @@ import ResultPage from "./ResultPage";
 const result = new ResultPage();
 
 class SearchPage{
+    checkInputFieldFocused(){
+        cy.get('input[id="search"]').click().then(() =>{
+            Cypress.dom.isFocused();
+        });
+    }
     search(searchKeyword){
         cy.get('input[id="search"]').type(searchKeyword);
     }
